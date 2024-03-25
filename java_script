@@ -1,0 +1,56 @@
+let a = 4;
+console.log(++a);
+console.log(a);
+console.log(a**2)
+
+var x = 10;
+console.log(x);
+
+var x = 20;
+console.log(x);
+
+function testVar() {
+    var y = 30;
+    console.log(y); 
+}
+
+function testVar() {
+    var y = 30;
+    console.log(y); 
+}
+
+const PI = 3.14;
+console.log(PI);
+
+PI = 3.14159;
+
+const MY_ARRAY;
+
+
+let array = [1, 2, 3, 4, 5];
+console.log(array.length); // Tamanho do array
+
+let array = [1, 2, 3, 4, 5];
+console.log(array[2]); // recuperalao elemento
+
+let array = [1, 2, 3];
+array[3] = 4;
+console.log(array); // inclusão elemento
+
+let array = [1, 2, 3];
+let removedElement = array.shift();
+console.log(array); 
+console.log(removedElement); // shift
+
+let array = [1, 2, 3];
+array.push(4);
+console.log(array); // push
+
+let array = [2, 3];
+array.unshift(1);
+console.log(array); // unshift
+
+let array = [1, 2, 3];
+let removedElement = array.pop();
+console.log(array); 
+console.log(removedElement); // pop 
