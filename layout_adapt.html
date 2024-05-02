@@ -1,0 +1,213 @@
+Exercício 1
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Responsivo</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    @media (min-width: 576px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .grid-container {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
+
+    .grid-item {
+      background-color: #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+  <div class="grid-item">Item 6</div>
+  <div class="grid-item">Item 7</div>
+  <div class="grid-item">Item 8</div>
+  <div class="grid-item">Item 9</div>
+  <div class="grid-item">Item 10</div>
+  <div class="grid-item">Item 11</div>
+  <div class="grid-item">Item 12</div>
+  <div class="grid-item">Item 13</div>
+  <div class="grid-item">Item 14</div>
+  <div class="grid-item">Item 15</div>
+  <div class="grid-item">Item 16</div>
+  <div class="grid-item">Item 17</div>
+  <div class="grid-item">Item 18</div>
+</div>
+
+</body>
+</html>
+
+Exercício 2
+A)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Responsivo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 300px);
+      gap: 20px;
+      background-color: yellow;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-areas:
+          "p p . ."
+          "p p . ."
+          ". b b b";
+      }
+
+      .black {
+        grid-area: p;
+      }
+
+      .white {
+        grid-area: b;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="black"></div>
+  <div class="black"></div>
+  <div class="white"></div>
+  <div class="white"></div>
+  <div class="black"></div>
+  <div class="black"></div>
+  <div class="white"></div>
+  <div class="white"></div>
+</div>
+
+</body>
+</html>
+B) 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Responsivo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 300px);
+      gap: 20px;
+      background-color: yellow;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-areas:
+          "p p . ."
+          "p p . ."
+          ". b b b";
+      }
+
+      .black {
+        grid-area: p;
+      }
+
+      .white {
+        grid-area: b;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-container {
+        grid-template-areas:
+          "p p p p"
+          ". . . ."
+          "b b b b";
+      }
+
+      .black {
+        grid-area: p;
+      }
+
+      .white {
+        grid-area: b;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="black"></div>
+  <div class="black"></div>
+  <div class="white"></div>
+  <div class="white"></div>
+  <div class="black"></div>
+  <div class="black"></div>
+  <div class="white"></div>
+  <div class="white"></div>
+</div>
+
+</body>
+</html>
